@@ -1,7 +1,6 @@
 //Typically we would store in {process.env.API_KEY}
 const API_KEY = "019a53854ad285e09a5edea42b0d28cb";
 
-
 const requests = {
     fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`, 
     fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,  
