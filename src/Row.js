@@ -3,7 +3,7 @@ import axios from "./axios";
 import "./Row.css";
 function Row({ title , fetchUrl, isLargeRow = false}) {
 
-    const [movies, setMovies] = useState([]);
+    const [films, setMovies] = useState([]);
 
     const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -18,29 +18,20 @@ function Row({ title , fetchUrl, isLargeRow = false}) {
 
     },[fetchUrl]);
 
-    console.log(movies);
+    console.log(films);
 
     return (
         <div className='row'>
             <h2>{title}</h2>
 
-            
-
-
-            {movies.map((movie) =>( 
-                <h1>THIS IS H!</h1>
-            // <img 
-            //     src={`${base_url}${
-            //         isLargeRow ? movie.poster_path : movie.backdrop_path
-            //     }`}
-            //     alt = {movie.name}
-            // />
-
+            {films.map((movie) => (
+                <img 
+                    src={`${base_url}${
+                        isLargeRow ? movie.poster_path : movie.backdrop_path
+                    }`} 
+                    alt={movie.name}
+                    />
             ))}
-
-
-
-
         </div>
     );
 }
