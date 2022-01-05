@@ -1,6 +1,7 @@
 .row{
     color: white;
     margin-left: 20px;
+    margin-top: 20px;
 
 }
 
@@ -8,20 +9,30 @@
     display: flex;
     overflow-x: scroll;
     overflow-y:hidden ;
-  
+    cursor: pointer;
     padding:20px;
 }
 
 .row_posters::-webkit-scrollbar{
-    display: none;
+    width: 30px;
+    height: 4px;
 }
 
+.row_posters::-webkit-scrollbar-button{
+    height: 137px;
+    width: 191px;
+
+}
+
+.parental-div{
+    width: 100%;
+}
 
 .row_poster{
     max-height: 100px;
     object-fit: contain;
     margin-right: 10px;
-    width: 100%;
+    width: 150px;
     transition: transform 450ms;
 }
 .row_poster:hover{
@@ -36,4 +47,27 @@
 .row_posterLarge:hover{
     transform: scale(1.09);
     opacity: 1;
+}
+
+
+.img-p{
+    visibility:hidden;
+}
+.visible{
+    visibility: visible;
+}
+.parental-div{
+    position: relative;
+}
+
+.movie-p{
+    position: absolute;
+    top:50%;
+    left:50%;
+}
+
+@media screen and (max-width:890px) {
+    .row_posters::-webkit-scrollbar{
+        display: none;
+    }
 }

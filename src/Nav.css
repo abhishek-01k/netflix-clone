@@ -13,7 +13,40 @@
 .nav-content{
     display: flex;
     justify-content: space-between;
+    color: white;
 }
+
+.mid-nav{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: end;
+
+}
+.mid-nav a{
+    text-decoration: none;
+    color: white;
+}
+.mid-nav a:hover{
+    
+    color: red;
+}
+
+.Action,.Comedy,.Horror,.Romance,.Doc{
+    margin-right: 30px;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.Action:hover,.Comedy:hover,.Horror:hover,.Romance:hover,.Doc:hover{
+    color: red;
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+
 .nav-black{
     background-color: #111;
 }
@@ -33,4 +66,16 @@
     right: 20px;
     width: 30px;
     cursor: pointer;
+}
+
+
+
+.burgerdiv{
+    height: 3px;
+}
+
+
+
+@media screen and (max-width:800px) {
+    .mid-nav{display: none;}
 }
